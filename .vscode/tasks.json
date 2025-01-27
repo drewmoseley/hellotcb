@@ -250,7 +250,7 @@
             "label": "tcb-setup",
             "detail": "",
             "hide": true,
-            "command": "DOCKER_HOST= bash -c ",
+            "command": "DOCKER_HOST= ./.conf/tcb.sh",
             "type": "shell",
             "runOptions": {
                 "runOn": "folderOpen"
@@ -258,19 +258,11 @@
             "options": {
                 "cwd": "${workspaceFolder}",
                 "env": {
+                    "STORAGE_FOLDER": "${workspaceFolder}/storage",
+                    "TCB_VERSION": "${config:tcb.version}",
                     "VSCODE_CMD": "--help"
                 }
             },
-            "args": [
-                "'",
-                "source",
-                "./.conf/tcb-env-setup.sh",
-                "-s",
-                "${workspaceFolder}/storage",
-                "-t",
-                "${config:tcb.version}",
-                "'"
-            ],
             "problemMatcher": [
                 "$tsc"
             ],
@@ -293,30 +285,16 @@
         {
             "label": "tcb-build",
             "detail": "Build the tcbuild.yaml file and generate the custom image",
-            "command": "DOCKER_HOST= bash -c ",
+            "command": "DOCKER_HOST= ./.conf/tcb.sh",
             "type": "shell",
             "options": {
                 "cwd": "${workspaceFolder}",
                 "env": {
+                    "STORAGE_FOLDER": "${workspaceFolder}/storage",
+                    "TCB_VERSION": "${config:tcb.version}",
                     "VSCODE_CMD": "--verbose build"
                 }
             },
-            "args": [
-                "'",
-                "pwd",
-                ";",
-                "ls -l",
-                ";",
-                "cat tcbuild.yaml",
-                ";",
-                "source",
-                "./.conf/tcb-env-setup.sh",
-                "-s",
-                "${workspaceFolder}/storage",
-                "-t",
-                "${config:tcb.version}",
-                "'"
-            ],
             "problemMatcher": [
                 "$tsc"
             ],
@@ -339,24 +317,16 @@
         {
             "label": "tcb-bundle",
             "detail": "Run the torizoncore-builder bundle command",
-            "command": "DOCKER_HOST= bash -c ",
+            "command": "DOCKER_HOST= ./.conf/tcb.sh",
             "type": "shell",
             "options": {
                 "cwd": "${workspaceFolder}",
                 "env": {
+                    "STORAGE_FOLDER": "${workspaceFolder}/storage",
+                    "TCB_VERSION": "${config:tcb.version}",
                     "VSCODE_CMD": "--verbose bundle ${command:tcb.listDockerComposeFiles}"
                 }
             },
-            "args": [
-                "'",
-                "source",
-                "./.conf/tcb-env-setup.sh",
-                "-s",
-                "${workspaceFolder}/storage",
-                "-t",
-                "${config:tcb.version}",
-                "'"
-            ],
             "problemMatcher": [
                 "$tsc"
             ],
@@ -378,24 +348,16 @@
         {
             "label": "tcb-bundle-platform",
             "detail": "Run the torizoncore-builder bundle command with --platform argument",
-            "command": "DOCKER_HOST= bash -c ",
+            "command": "DOCKER_HOST= ./.conf/tcb.sh",
             "type": "shell",
             "options": {
                 "cwd": "${workspaceFolder}",
                 "env": {
+                    "STORAGE_FOLDER": "${workspaceFolder}/storage",
+                    "TCB_VERSION": "${config:tcb.version}",
                     "VSCODE_CMD": "--verbose bundle ${command:tcb.listDockerComposeFiles} --platform ${input:archList}"
                 }
             },
-            "args": [
-                "'",
-                "source",
-                "./.conf/tcb-env-setup.sh",
-                "-s",
-                "${workspaceFolder}/storage",
-                "-t",
-                "${config:tcb.version}",
-                "'"
-            ],
             "problemMatcher": [
                 "$tsc"
             ],
@@ -417,24 +379,16 @@
         {
             "label": "tcb-bundle-platform-dind-param",
             "detail": "Run the torizoncore-builder bundle command with --platform and --dind-param arguments",
-            "command": "DOCKER_HOST= bash -c ",
+            "command": "DOCKER_HOST= ./.conf/tcb.sh",
             "type": "shell",
             "options": {
                 "cwd": "${workspaceFolder}",
                 "env": {
+                    "STORAGE_FOLDER": "${workspaceFolder}/storage",
+                    "TCB_VERSION": "${config:tcb.version}",
                     "VSCODE_CMD": "--verbose bundle ${command:tcb.listDockerComposeFiles} --platform ${input:archList} --dind-param=\"${input:dindParam}\""
                 }
             },
-            "args": [
-                "'",
-                "source",
-                "./.conf/tcb-env-setup.sh",
-                "-s",
-                "${workspaceFolder}/storage",
-                "-t",
-                "${config:tcb.version}",
-                "'"
-            ],
             "problemMatcher": [
                 "$tsc"
             ],
@@ -457,24 +411,16 @@
             "label": "tcb-unpack",
             "detail": "",
             "hide": true,
-            "command": "DOCKER_HOST= bash -c ",
+            "command": "DOCKER_HOST= ./.conf/tcb.sh",
             "type": "shell",
             "options": {
                 "cwd": "${workspaceFolder}",
                 "env": {
+                    "STORAGE_FOLDER": "${workspaceFolder}/storage",
+                    "TCB_VERSION": "${config:tcb.version}",
                     "VSCODE_CMD": "--verbose images --remove-storage unpack ${command:tcb.outputTEZIFolder}"
                 }
             },
-            "args": [
-                "'",
-                "source",
-                "./.conf/tcb-env-setup.sh",
-                "-s",
-                "${workspaceFolder}/storage",
-                "-t",
-                "${config:tcb.version}",
-                "'"
-            ],
             "problemMatcher": [
                 "$tsc"
             ],
@@ -496,24 +442,16 @@
         {
             "label": "tcb-deploy",
             "detail": "Run the torizoncore-builder deploy command to the default target device",
-            "command": "DOCKER_HOST= bash -c ",
+            "command": "DOCKER_HOST= ./.conf/tcb.sh",
             "type": "shell",
             "options": {
                 "cwd": "${workspaceFolder}",
                 "env": {
+                    "STORAGE_FOLDER": "${workspaceFolder}/storage",
+                    "TCB_VERSION": "${config:tcb.version}",
                     "VSCODE_CMD": "--verbose deploy --remote-host ${config:torizon_ip} --remote-username ${config:torizon_login} --remote-password '${config:torizon_psswd}' --reboot"
                 }
             },
-            "args": [
-                "'",
-                "source",
-                "./.conf/tcb-env-setup.sh",
-                "-s",
-                "${workspaceFolder}/storage",
-                "-t",
-                "${config:tcb.version}",
-                "'"                
-            ],
             "problemMatcher": [
                 "$tsc"
             ],
@@ -536,24 +474,16 @@
         {
             "label": "tcb-platform-push-ostree",
             "detail": "Run the torizoncore-builder platform push command to torizon.io cloud",
-            "command": "DOCKER_HOST= bash -c ",
+            "command": "DOCKER_HOST= ./.conf/tcb.sh",
             "type": "shell",
             "options": {
                 "cwd": "${workspaceFolder}",
                 "env": {
+                    "STORAGE_FOLDER": "${workspaceFolder}/storage",
+                    "TCB_VERSION": "${config:tcb.version}",
                     "VSCODE_CMD": "--verbose platform push --credentials credentials.zip --package-name hellotcb --package-version ${command:tcb.getNextPackageVersion} hellotcb"
                 }
             },
-            "args": [
-                "'",
-                "source",
-                "./.conf/tcb-env-setup.sh",
-                "-s",
-                "${workspaceFolder}/storage",
-                "-t",
-                "${config:tcb.version}",
-                "'"
-            ],
             "problemMatcher": [
                 "$tsc"
             ],
