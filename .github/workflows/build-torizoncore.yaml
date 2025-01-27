@@ -8,6 +8,7 @@ jobs:
     name: Build & Deploy TorizonCore
     container:
       image: torizonextras/torizon-dev:dev
+      options: --user root
     steps:
       - uses: actions/checkout@v3
       - uses: actions/cache@v3
