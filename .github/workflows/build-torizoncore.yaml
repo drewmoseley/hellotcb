@@ -8,7 +8,6 @@ jobs:
     name: Build & Deploy TorizonCore
     container:
       image: torizonextras/torizon-dev:dev
-      options: --user root
     steps:
       - uses: actions/checkout@v3
       - uses: actions/cache@v3
@@ -31,8 +30,6 @@ jobs:
       - name: Build TorizonCore Image
         shell: xonsh {0}
         run: |
-          pwd
+          id
           xonsh ./.vscode/tasks.xsh run tcb-setup
-          pwd
-          cat abs-path
           xonsh ./.vscode/tasks.xsh run tcb-build
