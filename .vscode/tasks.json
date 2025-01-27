@@ -250,7 +250,7 @@
             "label": "tcb-setup",
             "detail": "",
             "hide": true,
-            "command": "DOCKER_HOST=",
+            "command": "DOCKER_HOST= bash -c ",
             "type": "shell",
             "runOptions": {
                 "runOn": "folderOpen"
@@ -262,12 +262,14 @@
                 }
             },
             "args": [
+                "'",
                 "source",
                 "./.conf/tcb-env-setup.sh",
                 "-s",
                 "${workspaceFolder}/storage",
                 "-t",
-                "${config:tcb.version}"
+                "${config:tcb.version}",
+                "'"
             ],
             "problemMatcher": [
                 "$tsc"
@@ -291,7 +293,7 @@
         {
             "label": "tcb-build",
             "detail": "Build the tcbuild.yaml file and generate the custom image",
-            "command": "DOCKER_HOST=",
+            "command": "DOCKER_HOST= bash -c ",
             "type": "shell",
             "options": {
                 "cwd": "${workspaceFolder}",
@@ -300,12 +302,14 @@
                 }
             },
             "args": [
+                "'",
                 "source",
                 "./.conf/tcb-env-setup.sh",
                 "-s",
                 "${workspaceFolder}/storage",
                 "-t",
-                "${config:tcb.version}"
+                "${config:tcb.version}",
+                "'"
             ],
             "problemMatcher": [
                 "$tsc"
@@ -329,7 +333,7 @@
         {
             "label": "tcb-bundle",
             "detail": "Run the torizoncore-builder bundle command",
-            "command": "DOCKER_HOST=",
+            "command": "DOCKER_HOST= bash -c ",
             "type": "shell",
             "options": {
                 "cwd": "${workspaceFolder}",
@@ -338,12 +342,14 @@
                 }
             },
             "args": [
+                "'",
                 "source",
                 "./.conf/tcb-env-setup.sh",
                 "-s",
                 "${workspaceFolder}/storage",
                 "-t",
-                "${config:tcb.version}"
+                "${config:tcb.version}",
+                "'"
             ],
             "problemMatcher": [
                 "$tsc"
@@ -366,7 +372,7 @@
         {
             "label": "tcb-bundle-platform",
             "detail": "Run the torizoncore-builder bundle command with --platform argument",
-            "command": "DOCKER_HOST=",
+            "command": "DOCKER_HOST= bash -c ",
             "type": "shell",
             "options": {
                 "cwd": "${workspaceFolder}",
@@ -375,12 +381,14 @@
                 }
             },
             "args": [
+                "'",
                 "source",
                 "./.conf/tcb-env-setup.sh",
                 "-s",
                 "${workspaceFolder}/storage",
                 "-t",
-                "${config:tcb.version}"
+                "${config:tcb.version}",
+                "'"
             ],
             "problemMatcher": [
                 "$tsc"
@@ -403,7 +411,7 @@
         {
             "label": "tcb-bundle-platform-dind-param",
             "detail": "Run the torizoncore-builder bundle command with --platform and --dind-param arguments",
-            "command": "DOCKER_HOST=",
+            "command": "DOCKER_HOST= bash -c ",
             "type": "shell",
             "options": {
                 "cwd": "${workspaceFolder}",
@@ -412,12 +420,14 @@
                 }
             },
             "args": [
+                "'",
                 "source",
                 "./.conf/tcb-env-setup.sh",
                 "-s",
                 "${workspaceFolder}/storage",
                 "-t",
-                "${config:tcb.version}"
+                "${config:tcb.version}",
+                "'"
             ],
             "problemMatcher": [
                 "$tsc"
@@ -441,7 +451,7 @@
             "label": "tcb-unpack",
             "detail": "",
             "hide": true,
-            "command": "DOCKER_HOST=",
+            "command": "DOCKER_HOST= bash -c ",
             "type": "shell",
             "options": {
                 "cwd": "${workspaceFolder}",
@@ -450,12 +460,14 @@
                 }
             },
             "args": [
+                "'",
                 "source",
                 "./.conf/tcb-env-setup.sh",
                 "-s",
                 "${workspaceFolder}/storage",
                 "-t",
-                "${config:tcb.version}"
+                "${config:tcb.version}",
+                "'"
             ],
             "problemMatcher": [
                 "$tsc"
@@ -478,7 +490,7 @@
         {
             "label": "tcb-deploy",
             "detail": "Run the torizoncore-builder deploy command to the default target device",
-            "command": "DOCKER_HOST=",
+            "command": "DOCKER_HOST= bash -c ",
             "type": "shell",
             "options": {
                 "cwd": "${workspaceFolder}",
@@ -487,12 +499,14 @@
                 }
             },
             "args": [
+                "'",
                 "source",
                 "./.conf/tcb-env-setup.sh",
                 "-s",
                 "${workspaceFolder}/storage",
                 "-t",
-                "${config:tcb.version}"
+                "${config:tcb.version}",
+                "'"                
             ],
             "problemMatcher": [
                 "$tsc"
@@ -516,7 +530,7 @@
         {
             "label": "tcb-platform-push-ostree",
             "detail": "Run the torizoncore-builder platform push command to torizon.io cloud",
-            "command": "DOCKER_HOST=",
+            "command": "DOCKER_HOST= bash -c ",
             "type": "shell",
             "options": {
                 "cwd": "${workspaceFolder}",
@@ -525,12 +539,14 @@
                 }
             },
             "args": [
+                "'",
                 "source",
                 "./.conf/tcb-env-setup.sh",
                 "-s",
                 "${workspaceFolder}/storage",
                 "-t",
-                "${config:tcb.version}"
+                "${config:tcb.version}",
+                "'"
             ],
             "problemMatcher": [
                 "$tsc"
