@@ -303,6 +303,12 @@
             },
             "args": [
                 "'",
+                "pwd",
+                ";",
+                "ls -l",
+                ";",
+                "cat tcbuild.yaml",
+                ";",
                 "source",
                 "./.conf/tcb-env-setup.sh",
                 "-s",
