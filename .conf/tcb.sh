@@ -7,6 +7,6 @@ ls -l
 id
 
 TCB_ENV="$(pwd)/.conf/tcb-env-setup.sh"
-echo "TCB_SH_DEBUG: cmd: source ${TCB_ENV} -s ${STORAGE_FOLDER} -t ${TCB_VERSION}"
+echo "TCB_SH_DEBUG: cmd: source ${TCB_ENV} -d -s ${STORAGE_FOLDER} -t ${TCB_VERSION}"
 
-source ${TCB_ENV} -s ${STORAGE_FOLDER} -t ${TCB_VERSION}
+source ${TCB_ENV} -d -s ${STORAGE_FOLDER} -t ${TCB_VERSION}
