@@ -1,0 +1,5 @@
+storage/
+tuf/
+hellotcb-TCB-CUSTOM/
+credentials.zip
+*.lock.yml
