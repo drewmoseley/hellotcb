@@ -7,22 +7,22 @@ input:
   # ⚠️ change it for your needs
   easy-installer:
     toradex-feed:
-      version: "6.7.0"
+      version: "7.1.0"
       release: quarterly
-      machine: verdin-imx8mp
+      machine: verdin-imx8mm
       distro: torizon
       variant: torizon-core-docker
-      build-number: 18
+      build-number: 4
 
 customization:
   # Customization section items.
-  splash-screen: splashScreen.png
+  splash-screen: max.png
 
 output:
   # Output section items (required).
   # ⚠️ change it for your needs
   easy-installer:
-    local: hellotcb-TCB-CUSTOM
+    local: hellotcb-TCB-CUSTOM-max
   ostree:
-    branch: hellotcb
-    commit-subject: hellotcb
+    branch: hellotcb-max
+    commit-subject: hellotcb-max
