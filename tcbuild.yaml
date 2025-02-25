@@ -25,4 +25,4 @@ output:
     local: hellotcb-TCB-CUSTOM-max
   ostree:
     branch: hellotcb
-    commit-subject: hellotcb-max
+    commit-subject: hellotcb-max Test on Feb 25
