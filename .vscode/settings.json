@@ -19,12 +19,17 @@
   "tcb.version": "3.11.0",
   "torizon.gpuPrefixRC": true,
   "terminal.integrated.defaultProfile.linux": "bash",
-  "tcb.fleetName": "",
+  "tcb.fleetName": "dev",
   "docker.environment": {
     "DOCKER_HOST": "tcp://192.168.17.95:2375",
     "DEBUG_SSH_PORT": "2222",
     "DEBUG_PORT1": "2222",
     "DEBUG_PORT2": "2223",
     "DEBUG_PORT3": "2224"
-  }
+  },
+  "docker_registry": "registry-1.docker.io",
+  "docker_login": "drewmoseley",
+  "docker_password": "secret",
+  "tcb.clientId": "tzn_api_51b9a304-4621-421e-a93b-bf3b062e4ea1_Pw2CEW",
+  "tcb.clientSecret": "secret"
 }
