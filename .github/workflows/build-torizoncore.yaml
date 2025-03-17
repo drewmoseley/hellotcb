@@ -1,6 +1,7 @@
 name: Build & Deploy TorizonCore
 on:
   - push
+  - workflow_dispatch  # allow manually triggering builds
 
 jobs:
   build-deploy:
