@@ -19,7 +19,7 @@
   "tcb.version": "early-access",
   "torizon.gpuPrefixRC": true,
   "terminal.integrated.defaultProfile.linux": "bash",
-  "tcb.fleetName": "dev",
+  "tcb.fleetName": "Dev",
   "docker_registry": "registry-1.docker.io",
   "docker_login": "drewmoseley",
   "docker_password": "secret",
